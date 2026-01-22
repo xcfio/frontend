@@ -14,5 +14,23 @@ label {
 }
 
 input {
+    background: #aaaaf2;
+    border: none;
+    width: 15rem;
+    height: 1.2rem;
+    border-radius: 0.3rem;
     margin-top: 0.2rem;
+}
+
+button {
+    margin-top: 0.3rem;
+    background: #aaaaf2;
+    border-radius: 0.3rem;
+    width: 4rem;
+    height: 1.5rem;
+    border: none;
+}
+
+.nested {
+    display: block;
 }
