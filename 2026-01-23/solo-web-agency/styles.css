@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+    font-family: "Open Sans";
+    font-size: 200%;
+    background-image: url("./img/faded-office.png");
+    background-size: cover;
+}
+
+div {
+    margin-left: 2rem;
+    width: 50%;
+}
+
+h1 {
+    margin: 2rem 0px 10px 0px;
+    font-weight: 800;
+}
+
+p {
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+span {
+    border-bottom: 5px solid #0ea5e9;
+}
+
+button {
+    background: #0ea5e9;
+    font-weight: 800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0px;
+}
