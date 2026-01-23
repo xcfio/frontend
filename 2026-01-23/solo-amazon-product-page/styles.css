@@ -1,0 +1,35 @@
+body {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #007185;
+}
+
+h3 {
+    color: #565959;
+    font-size: 0.8rem;
+}
+
+.title {
+    font-weight: lighter;
+}
+
+.main-img {
+    width: 300px;
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+.container {
+    display: flex;
+}
+
+.ratings {
+    width: 150px;
+}
+
+.space {
+    margin: 0px 10px;
+}
+
