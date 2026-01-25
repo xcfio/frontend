@@ -84,6 +84,7 @@ web_modules/
 .env.local
 config*.json
 *.csv
+est
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
