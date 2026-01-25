@@ -18,12 +18,12 @@ p {
 #bff-img {
     width: 150px;
     border-radius: 50%;
-    border: 6px solid #efb0c9;
+    border: 6px solid cornflowerblue;
     margin-bottom: 10px;
 }
 
 #bday-age {
-    background: #efb0c9;
+    background: cornflowerblue;
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px 0 10px 0;
@@ -31,7 +31,7 @@ p {
 
 #bday-date {
     margin: 0;
-    background: #efb0c9;
+    background: cornflowerblue;
     padding: 5px 10px;
     border-radius: 5px;
 }
