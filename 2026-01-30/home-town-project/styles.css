@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    font-family: "Comfortaa", cursive;
+    font-weight: normal;
+    color: #1d3557;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/torshov.jpg");
+    background-size: cover;
+    object-fit: cover;
+    padding: 10rem;
+}
+
+.h-title {
+    border: 10px solid #1d3557;
+    background-color: #1d3557;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 1px 6px;
+}
+
+.h-description {
+    border: 10px solid #457b9d;
+    background-color: #457b9d;
+    color: #ffffff;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 30rem;
+}
+
+.activity {
+    display: block;
+    background-color: #f1faee;
+    background-size: cover;
+    padding: 3rem 0rem;
+    margin: 10px 0px;
+}
+
+.activity-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.activities {
+    margin: 0px 30px;
+}
+
+.activity-title {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.activities img {
+    border-radius: 50px;
+    width: 100px;
+}
+
+.activities h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.guide {
+    background-color: #a8dadc;
+    border-bottom: 10px solid #1d3557;
+    border-radius: 10px;
+    margin: 50px 250px;
+    padding: 30px 50px;
+    display: flex;
+}
+
+.guide img {
+    width: 150px;
+}
+
+.guide-section {
+    margin: 10px 20px;
+    margin-right: 0px;
+}
+
+.guide-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.guide-author {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
