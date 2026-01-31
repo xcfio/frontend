@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+* {
+    font-family: Comfortaa;
+    margin: 0;
+}
+
+body {
+    background-color: #1f2937;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+.text {
+    margin-top: 100px;
+}
+
+.t1 {
+    color: white;
+}
+
+.t2 {
+    color: #55f991;
+}
+
+p {
+    margin-top: 10px;
+    color: #d5d4d8;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #10b981;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px;
+    width: 200px;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px #059669;
+    cursor: pointer;
+}
+
+.p-section {
+    border-top: 1px solid #2f3e53;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.password {
+    margin-top: 25px;
+    background-color: #273549;
+    color: #55f991;
+    width: 235px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.password:hover {
+    cursor: pointer;
+    background-color: #374151;
+}
+
