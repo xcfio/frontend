@@ -69,7 +69,7 @@ body {
 .activity-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .activities {
@@ -82,27 +82,37 @@ body {
     font-size: 28px;
 }
 
-.activities img {
+.activities-img {
     border-radius: 50px;
     width: 100px;
+    margin-bottom: 20px;
 }
 
-.activities h3 {
+.activities-title {
+    width: 250px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.activities-description {
+    width: 250px;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .guide {
     background-color: #a8dadc;
     border-bottom: 10px solid #1d3557;
     border-radius: 10px;
-    margin: 50px 250px;
+    margin: 50px auto;
     padding: 30px 50px;
+    width: 415px;
     display: flex;
 }
 
-.guide img {
+.guide-img {
     width: 150px;
+    border-radius: 10px;
 }
 
 .guide-section {
