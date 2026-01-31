@@ -1,4 +1,4 @@
-import { letter } from "./letters"
+import { letter } from "./letters.js"
 
 const btn = document.getElementById("btn")
 const p1 = document.getElementById("p1")
