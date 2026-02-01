@@ -1,10 +1,41 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="index.js"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <script defer src="index.js"></script>
+        <title>Metric/Imperial Unit Conversion</title>
     </head>
-    <body>
-        <h1 class="font-bold text-amber-400">Working</h1>
+    <!-- <body class="bg-[#1F2937]"> -->
+    <body class="body">
+        <!-- Container -->
+        <!-- <div class="bg-[#1F2937] w-125 flex flex-col items-center justify-between text-center"> -->
+        <div class="container">
+            <!-- Input -->
+            <div class="input">
+                <!-- <div class="bg-[#6943FF] px-[70px] py-[60px] flex flex-col text-white justify-around items-center"> -->
+                <h1>Metric/Imperial Unit Conversion</h1>
+                <input id="input" minlength="1" maxlength="2" type="text" placeholder="00" />
+                <!-- <input class="border rounded-[2px] w-[60px] py-[px] text-[30px] text-center" min="1" max="99" type="number" placeholder="00" value="20" /> -->
+                <button id="btn">Convert</button>
+            </div>
+            <!-- Output -->
+            <div class="output">
+                <!-- Length -->
+                <div class="output-section">
+                    <h2 class="output-type">Length (Meter/Feet)</h2>
+                    <p class="output-data" id="length">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
+                </div>
+                <!-- Volume -->
+                <div class="output-section">
+                    <h2 class="output-type">Volume (Liters/Gallons)</h2>
+                    <p class="output-data" id="volume">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+                </div>
+                <!-- Mass -->
+                <div class="output-section">
+                    <h2 class="output-type">Mass (Kilograms/Pounds)</h2>
+                    <p class="output-data" id="mass">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
