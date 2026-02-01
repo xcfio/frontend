@@ -28,4 +28,3 @@ p2.addEventListener("click", () => {
     navigator.clipboard.writeText(p2.textContent)
     p2.style.backgroundColor = "#374151"
 })
-
