@@ -1,9 +1,9 @@
-const input = document.getElementById("input")
-const btn = document.getElementById("btn")
+const input = document.getElementById("input") as HTMLInputElement
+const btn = document.getElementById("btn") as HTMLButtonElement
 
-const length = document.getElementById("length")
-const volume = document.getElementById("volume")
-const mass = document.getElementById("mass")
+const length = document.getElementById("length") as HTMLParagraphElement
+const volume = document.getElementById("volume") as HTMLParagraphElement
+const mass = document.getElementById("mass") as HTMLParagraphElement
 
 const format = {
     length: (input: string | number, feet: string | number, meters: string | number) =>
@@ -21,15 +21,15 @@ btn.addEventListener("click", () => {
 
     const feet = (inputValue * 3.281).toFixed(3)
     const meters = (inputValue / 3.281).toFixed(3)
-    ;(length as HTMLParagraphElement).textContent = format.length(inputValue, feet, meters)
+    length.textContent = format.length(inputValue, feet, meters)
 
     const gallons = (inputValue * 0.264).toFixed(3)
     const liters = (inputValue / 0.264).toFixed(3)
-    ;(volume as HTMLParagraphElement).textContent = format.volume(inputValue, gallons, liters)
+    volume.textContent = format.volume(inputValue, gallons, liters)
 
     const pounds = (inputValue * 2.204).toFixed(3)
     const kilos = (inputValue / 2.204).toFixed(3)
-    ;(mass as HTMLParagraphElement).textContent = format.mass(inputValue, pounds, kilos)
+    mass.textContent = format.mass(inputValue, pounds, kilos)
 })
 
 /*
