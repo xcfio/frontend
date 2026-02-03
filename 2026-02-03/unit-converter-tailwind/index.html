@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Tailwind</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer type="module" src="index.ts"></script>
+    </head>
+    <body>
+        <body class="flex flex-row justify-center text-center bg-[#3b4149]">
+            <!-- Container -->
+            <div class="felx flex-col justify-start items-center w-[600px] m-[20px]">
+                <!-- Input -->
+                <div
+                    class="flex flex-col justify-start items-center py-[50px] px-[0px] bg-[#6943ff] text-white rounded-t-[20px]"
+                >
+                    <h1 class="mb-[40px] text-3xl font-bold">Metric/Imperial Unit Conversion</h1>
+                    <input
+                        class="pt-[10px] text-center border-[2px] border-solid border-[#b295ff] rounded-[5px] text-[4rem] w-[125px] h-[85px] bg-[#6943ff] text-white"
+                        id="input"
+                        minlength="1"
+                        maxlength="2"
+                        type="text"
+                        placeholder="00"
+                    />
+                    <button
+                        class="py-[10px] px-[20px] mt-[30px] mb-[0px] bg-white text-black border-none rounded-[5px]"
+                        id="btn"
+                    >
+                        Convert
+                    </button>
+                </div>
+                <!-- Output -->
+                <div class="bg-[#1f2937] flex flex-col items-center justify-around py-[14px] rounded-b-[20px]">
+                    <!-- Length -->
+                    <div class="w-[550px] bg-[#273549] rounded-[20px] my-[14px] mx-auto">
+                        <h2 class="pt-[30px] pb-[10px] text-blue-400 text-2xl">Length (Meter/Feet)</h2>
+                        <p class="pt-[10px] pb-[30px] text-white" id="length">
+                            0 meters = 0.000 feet | 0 feet = 0.000 meters
+                        </p>
+                    </div>
+                    <!-- Volume -->
+                    <div class="w-[550px] bg-[#273549] rounded-[20px] my-[14px] mx-auto">
+                        <h2 class="pt-[30px] pb-[10px] text-blue-400 text-2xl">Volume (Liters/Gallons)</h2>
+                        <p class="pt-[10px] pb-[30px] text-white" id="volume">
+                            0 liters = 0.000 gallons | 0 gallons = 0.000 liters
+                        </p>
+                    </div>
+                    <!-- Mass -->
+                    <div class="w-[550px] bg-[#273549] rounded-[20px] my-[14px] mx-auto">
+                        <h2 class="pt-[30px] pb-[10px] text-blue-400 text-2xl">Mass (Kilograms/Pounds)</h2>
+                        <p class="pt-[10px] pb-[30px] text-white" id="mass">
+                            0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </body>
+</html>
