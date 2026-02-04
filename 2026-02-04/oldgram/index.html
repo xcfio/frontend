@@ -1,14 +1,61 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Tailwind</title>
+        <title>Oldgram</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <script defer type="module" src="index.ts"></script>
     </head>
-    <body>
-        <h1 class="font-normal text-blue-500 text-9xl">Hello world!</h1>
+    <body class="bg-blue-400">
+        <div class="w-100 mx-auto">
+            <nav class="bg-white border-b-[#C6C6C6] border-b-2 flex items-center justify-between px-5 py-2">
+                <img class="w-[30%] h-[30%]" src="images/logo.png" alt="Logo of the webpage" />
+                <img class="w-[10%] h-[10%] rounded-full" src="images/user-avatar.png" alt="Picture of the user" />
+            </nav>
+            <main class="bg-[#EDEDED] flex flex-col justify-around gap-8" id="main">
+                <article class="bg-white flex flex-col">
+                    <header class="flex justify-start items-center gap-4 p-4">
+                        <img
+                            class="w-[10%] h-[10%] rounded-full"
+                            src="images/avatar-vangogh.jpg"
+                            alt="A photo of Vincent van Gogh"
+                        />
+                        <div>
+                            <h2 class="font-black">Vincent van Gogh</h2>
+                            <p>Zundert, Netherlands</p>
+                        </div>
+                    </header>
+                    <figure>
+                        <img
+                            class="w-[100%]"
+                            src="images/post-vangogh.jpg"
+                            alt="A Self-Portrait (1889) by the Dutch Post-Impressionist painter Vincent van Gogh"
+                        />
+                    </figure>
+                    <section class="flex flex-col m-4">
+                        <div class="flex justify-start items-center gap-4 mb-2">
+                            <img
+                                class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
+                                src="images/icon-heart.png"
+                                alt="Heart icon for liking the post"
+                            />
+                            <img
+                                class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
+                                src="images/icon-comment.png"
+                                alt="Comment icon for commenting on the post"
+                            />
+                            <img
+                                class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
+                                src="images/icon-dm.png"
+                                alt="Direct message icon for sending a direct message"
+                            />
+                        </div>
+                        <p class="mb-2 font-bold">21,492 likes</p>
+                        <p><span class="font-bold">vincey1853</span> just took a few mushrooms lol</p>
+                    </section>
+                </article>
+            </main>
+        </div>
     </body>
 </html>
-
