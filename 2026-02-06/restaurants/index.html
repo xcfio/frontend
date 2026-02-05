@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Restaurants</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script defer type="module" src="index.ts"></script>
+    </head>
+    <body class="bg-gray-200">
+        <div class="w-[600px] mx-auto relative">
+            <header>
+                <img
+                    src="./image.jpg"
+                    class="w-[600px] h-[167px] object-cover"
+                    alt="Jimmy's Diner - burgers and pizzas"
+                />
+                <div class="absolute flex flex-col top-0 left-0 ml-10 mt-12 gap-2 text-white">
+                    <h1 class="text-3xl font-bold">Jimmy’s Diner</h1>
+                    <p>The best burgers and pizzas in town.</p>
+                </div>
+            </header>
+            <main>
+                <section class="flex flex-col items-center justify-center bg-white" id="items-section">
+                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
+                        <div class="flex gap-4">
+                            <p class="text-8xl">🍕</p>
+                            <div class="flex flex-col gap-2">
+                                <div>
+                                    <h2 class="text-2xl font-bold">Pizza</h2>
+                                    <p>pepperoni, mushroom, mozzarella</p>
+                                </div>
+                                <p class="font-bold">$14</p>
+                            </div>
+                        </div>
+                        <button
+                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
+                            data-type="add"
+                            data-item=""
+                        >
+                            +
+                        </button>
+                    </div>
+                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
+                        <div class="flex gap-4">
+                            <p class="text-8xl">🍔</p>
+                            <div class="flex flex-col gap-2">
+                                <div>
+                                    <h2 class="text-2xl font-bold">Hamburger</h2>
+                                    <p>beef, cheese, lettuce</p>
+                                </div>
+                                <p class="font-bold">$14</p>
+                            </div>
+                        </div>
+                        <button
+                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
+                            data-type="add"
+                            data-item=""
+                        >
+                            +
+                        </button>
+                    </div>
+                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
+                        <div class="flex gap-4">
+                            <p class="text-8xl">🍺</p>
+                            <div class="flex flex-col gap-2">
+                                <div>
+                                    <h2 class="text-2xl font-bold">Beer</h2>
+                                    <p>grain, hops, yeast, water</p>
+                                </div>
+                                <p class="font-bold">$12</p>
+                            </div>
+                        </div>
+                        <button
+                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
+                            data-type="add"
+                            data-item=""
+                        >
+                            +
+                        </button>
+                    </div>
+                </section>
+                <section class="flex flex-col items-center justify-center bg-white py-5 gap-10" id="calculate-section">
+                    <h2 class="text-2xl pt-5">Your order</h2>
+                    <div class="flex flex-col gap-4 pb-2">
+                        <div class="border-b-gray-900 border-b-2 flex flex-col pb-2" id="order-list">
+                            <div class="w-[550px] flex flex-row justify-between">
+                                <div class="flex gap-3 items-center justify-center">
+                                    <h3>Pizza</h3>
+                                    <button
+                                        class="text-2xl text-gray-400 cursor-pointer hover:text-shadow-[0px_0px_20px] hover:text-shadow-blue-600 hover:text-blue-600 transition-all duration-200"
+                                        data-type="remove"
+                                        data-item=""
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                                <p>$14</p>
+                            </div>
+                            <div class="w-[550px] flex flex-row justify-between">
+                                <div class="flex gap-3 items-center justify-center">
+                                    <h3>Pizza</h3>
+                                    <button
+                                        class="text-2xl text-gray-400 cursor-pointer hover:text-shadow-[0px_0px_20px] hover:text-shadow-blue-600 hover:text-blue-600 transition-all duration-200"
+                                        data-type="remove"
+                                        data-item=""
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                                <p>$14</p>
+                            </div>
+                        </div>
+                        <div class="w-[550px] flex flex-row justify-between" id="order-price">
+                            <h3>Total price:</h3>
+                            <p>$28</p>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-[#16DB99] text-white font-black w-[550px] h-[60px] border-none rounded-xl cursor-pointer hover:bg-emerald-500 hover:shadow-[0px_0px_20px] hover:shadow-emerald-300 transition-all duration-300"
+                        id="order-btn"
+                    >
+                        Complete order
+                    </button>
+                </section>
+                <section
+                    class="hidden flex flex-col items-center justify-center bg-white py-5 gap-10"
+                    id="success-section"
+                >
+                    <h2
+                        class="bg-green-100 text-green-800 font-bold w-[550px] py-10 text-center text-xl"
+                        id="success-text"
+                    >
+                        Thanks, James! Your order is on its way!
+                    </h2>
+                </section>
+                <section
+                    class="hidden flex bg-white absolute top-0 left-0 bottom-0 right-0 w-[525px] h-[500px] m-auto flex-col justify-start items-center gap-12 shadow-[0px_0px_500px_black]"
+                    id="modal-section"
+                >
+                    <h2 class="text-3xl pt-12 font-bold">Enter card details</h2>
+                    <form class="flex flex-col justify-center w-[475px] gap-5" id="pay">
+                        <input
+                            class="border-gray-400 border-2 rounded-xl pl-4 py-4"
+                            placeholder="Enter your name"
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                        />
+                        <input
+                            class="border-gray-400 border-2 rounded-xl pl-4 py-4"
+                            placeholder="Enter your card number"
+                            id="ccn"
+                            name="ccn"
+                            type="tel"
+                            inputmode="numeric"
+                            pattern="[0-9\s]{13,19}"
+                            maxlength="19"
+                            required
+                        />
+                        <input
+                            class="border-gray-400 border-2 rounded-xl pl-4 py-4"
+                            placeholder="Enter your CVV"
+                            id="cvv"
+                            name="cvv"
+                            type="tel"
+                            inputmode="numeric"
+                            pattern="[0-9\s]{3}"
+                            maxlength="3"
+                            required
+                        />
+
+                        <button
+                            class="bg-[#16DB99] text-white mt-7 font-black h-[60px] border-none rounded-xl cursor-pointer hover:bg-emerald-500 hover:shadow-[0px_0px_20px] hover:shadow-emerald-300 transition-all duration-300"
+                            id="pay-btn"
+                        >
+                            Pay
+                        </button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
+
