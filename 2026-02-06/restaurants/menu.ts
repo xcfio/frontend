@@ -21,4 +21,3 @@ export const menu = [
         id: 2
     }
 ]
-

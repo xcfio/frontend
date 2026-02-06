@@ -5,7 +5,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <script src="https://unpkg.com/lucide@latest"></script>
         <script defer type="module" src="index.ts"></script>
     </head>
     <body class="bg-gray-200">
@@ -23,98 +22,19 @@
             </header>
             <main>
                 <section class="flex flex-col items-center justify-center bg-white" id="items-section">
-                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
-                        <div class="flex gap-4">
-                            <p class="text-8xl">🍕</p>
-                            <div class="flex flex-col gap-2">
-                                <div>
-                                    <h2 class="text-2xl font-bold">Pizza</h2>
-                                    <p>pepperoni, mushroom, mozzarella</p>
-                                </div>
-                                <p class="font-bold">$14</p>
-                            </div>
-                        </div>
-                        <button
-                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
-                            data-type="add"
-                            data-item=""
-                        >
-                            +
-                        </button>
-                    </div>
-                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
-                        <div class="flex gap-4">
-                            <p class="text-8xl">🍔</p>
-                            <div class="flex flex-col gap-2">
-                                <div>
-                                    <h2 class="text-2xl font-bold">Hamburger</h2>
-                                    <p>beef, cheese, lettuce</p>
-                                </div>
-                                <p class="font-bold">$14</p>
-                            </div>
-                        </div>
-                        <button
-                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
-                            data-type="add"
-                            data-item=""
-                        >
-                            +
-                        </button>
-                    </div>
-                    <div class="w-[550px] flex justify-between px-2 py-16 items-center border-b-gray-200 border-b-2">
-                        <div class="flex gap-4">
-                            <p class="text-8xl">🍺</p>
-                            <div class="flex flex-col gap-2">
-                                <div>
-                                    <h2 class="text-2xl font-bold">Beer</h2>
-                                    <p>grain, hops, yeast, water</p>
-                                </div>
-                                <p class="font-bold">$12</p>
-                            </div>
-                        </div>
-                        <button
-                            class="text-4xl text-center font-thin border-1 border-gray-400 rounded-full py-[10px] px-[20px] cursor-pointer hover:shadow-[0px_0px_10px] hover:shadow-blue-400 transition-shadow duration-300"
-                            data-type="add"
-                            data-item=""
-                        >
-                            +
-                        </button>
-                    </div>
+                    <!-- Items -->
                 </section>
-                <section class="flex flex-col items-center justify-center bg-white py-5 gap-10" id="calculate-section">
+                <section class="hidden flex-col items-center justify-center bg-white py-5 gap-10" id="order-section">
                     <h2 class="text-2xl pt-5">Your order</h2>
                     <div class="flex flex-col gap-4 pb-2">
                         <div class="border-b-gray-900 border-b-2 flex flex-col pb-2" id="order-list">
-                            <div class="w-[550px] flex flex-row justify-between">
-                                <div class="flex gap-3 items-center justify-center">
-                                    <h3>Pizza</h3>
-                                    <button
-                                        class="text-2xl text-gray-400 cursor-pointer hover:text-shadow-[0px_0px_20px] hover:text-shadow-blue-600 hover:text-blue-600 transition-all duration-200"
-                                        data-type="remove"
-                                        data-item=""
-                                    >
-                                        ×
-                                    </button>
-                                </div>
-                                <p>$14</p>
-                            </div>
-                            <div class="w-[550px] flex flex-row justify-between">
-                                <div class="flex gap-3 items-center justify-center">
-                                    <h3>Pizza</h3>
-                                    <button
-                                        class="text-2xl text-gray-400 cursor-pointer hover:text-shadow-[0px_0px_20px] hover:text-shadow-blue-600 hover:text-blue-600 transition-all duration-200"
-                                        data-type="remove"
-                                        data-item=""
-                                    >
-                                        ×
-                                    </button>
-                                </div>
-                                <p>$14</p>
-                            </div>
+                            <!-- Order -->
                         </div>
-                        <div class="w-[550px] flex flex-row justify-between" id="order-price">
+                        <div class="w-[550px] flex flex-row justify-between">
                             <h3>Total price:</h3>
-                            <p>$28</p>
+                            <p id="order-price">
+                                <!-- Price -->
+                            </p>
                         </div>
                     </div>
                     <button
@@ -124,10 +44,7 @@
                         Complete order
                     </button>
                 </section>
-                <section
-                    class="hidden flex flex-col items-center justify-center bg-white py-5 gap-10"
-                    id="success-section"
-                >
+                <section class="hidden flex-col items-center justify-center bg-white py-5 gap-10" id="success-section">
                     <h2
                         class="bg-green-100 text-green-800 font-bold w-[550px] py-10 text-center text-xl"
                         id="success-text"
@@ -136,7 +53,7 @@
                     </h2>
                 </section>
                 <section
-                    class="hidden flex bg-white absolute top-0 left-0 bottom-0 right-0 w-[525px] h-[500px] m-auto flex-col justify-start items-center gap-12 shadow-[0px_0px_500px_black]"
+                    class="hidden bg-white absolute top-0 left-0 bottom-0 right-0 w-[525px] h-[500px] m-auto flex-col justify-start items-center gap-12 shadow-[0px_0px_500px_black]"
                     id="modal-section"
                 >
                     <h2 class="text-3xl pt-12 font-bold">Enter card details</h2>
@@ -184,4 +101,3 @@
         </div>
     </body>
 </html>
-
