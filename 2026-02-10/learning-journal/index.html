@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My learning journal</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer type="module" src="index.ts"></script>
+    </head>
+    <body>
+        <nav class="flex justify-between items-center bg-white py-4 px-4 text-sm font-bold">
+            <a class="flex gap-1 items-center" href="./">
+                <img class="w-6" src="./image/logo.png" alt="Logo of the webpage" />
+                <span class="">My learning journal</span>
+            </a>
+            <ul class="list-none flex justify-between gap-6 items-center">
+                <li><a href="./">Home</a></li>
+                <li><a href="./about">About Me</a></li>
+            </ul>
+        </nav>
+        <header class="relative">
+            <a href="/blog">
+                <img class="w-full object-cover" src="./image/main-blog.png" alt="A laptop in a desk" />
+                <div class="absolute bottom-0 left-0 m-4 text-white">
+                    <time class="uppercase text-sm" datetime="2022-07-23">July 23, 2022</time>
+                    <h1 class="text-2xl font-bold">My new journey as a bootcamp student.</h1>
+                    <p class="text-sm">
+                        After several months of learning in the Frontend Developer Career Path, I've made the big jump
+                        over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet
+                        like-minded peers.
+                    </p>
+                </div>
+            </a>
+        </header>
+        <main class="grid m-4 gap-8">
+            <article class="flex flex-col gap-2">
+                <img class="rounded-sm" src="image/blog-1.png" alt="Blog post one featured image" />
+                <time class="text-sm uppercase mt-2" datetime="2022-07-23">July 23, 2022</time>
+                <h2 class="text-2xl font-black">Blog one</h2>
+                <p class="text-gray-800">
+                    I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of
+                    learning in the Frontend Developer Career Path.
+                </p>
+            </article>
+            <article class="flex flex-col gap-2">
+                <img class="rounded-sm" src="image/blog-2.png" alt="Blog post two featured image" />
+                <time class="text-sm uppercase mt-2" datetime="2022-07-23">July 23, 2022</time>
+                <h2 class="text-2xl font-black">Blog two</h2>
+                <p class="text-gray-800">
+                    I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of
+                    learning in the Frontend Developer Career Path.
+                </p>
+            </article>
+            <article class="flex flex-col gap-2">
+                <img class="rounded-sm" src="image/blog-3.png" alt="Blog post three featured image" />
+                <time class="text-sm uppercase mt-2" datetime="2022-07-23">July 23, 2022</time>
+                <h2 class="text-2xl font-black">Blog three</h2>
+                <p class="text-gray-800">
+                    I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of
+                    learning in the Frontend Developer Career Path.
+                </p>
+            </article>
+        </main>
+        <footer class="flex flex-col justify-center items-center bg-neutral-800 text-gray-100 py-10">
+            <p class="text-sm font-black">My Learning Journal</p>
+            <small>Copyright &copy;2022 </small>
+        </footer>
+    </body>
+</html>
