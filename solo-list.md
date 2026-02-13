@@ -5,3 +5,7 @@
 5.2 - Oldagram - https://www.figma.com/design/h0MKma9TTWzGOMQ9Ia6ROW/Oldagram
 6.4 - Restaurant Ordering app - https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu
 7.4 - Learning Journal - https://www.figma.com/design/hE5klIn1AEQ9XWZWmurs7y/Learning-Journal-Blog
+9.2 - Color Scheme Generator - https://www.figma.com/design/twasy8Bca4hW7gunLFSLoY/Color-Scheme-Generator
+9.3 - Movie Watchlist - https://www.figma.com/design/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist
+11.1 - Digital Business Card - https://www.figma.com/design/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card
+12.1 - Component Library - https://www.figma.com/design/8z3MzQUTw2STq71aHbjYaF/Component-Library
