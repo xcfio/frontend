@@ -1,6 +1,4 @@
-/**
- * Challenge: Fix our component! 😱
- */
+import Image from "../images/marker.png"
 
 export default function Entry(props) {
     return (
@@ -9,7 +7,7 @@ export default function Entry(props) {
                 <img className="main-image" src={props.img.src} alt={props.img.alt} />
             </div>
             <div className="info-container">
-                <img className="marker" src="../images/marker.png" alt="map marker icon" />
+                <img className="marker" src={Image} alt="map marker icon" />
                 <span className="country">{props.country}</span>
                 <a href={props.googleMapsLink} target="_blank">
                     View on Google Maps

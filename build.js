@@ -114,158 +114,109 @@ async function buildAll() {
     }
 
     // Create index.html for root
-    const indexHtml = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        h1 { 
-            color: #333; 
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-        }
-        .subtitle {
-            color: #666;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-        .date-section { 
-            margin-bottom: 2.5rem; 
-        }
-        .date-header { 
-            color: #667eea; 
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #667eea;
-        }
-        .projects { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 1rem;
-            margin-left: 1rem;
-        }
-        .project-link { 
-            display: block;
-            padding: 1rem 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        .project-link:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-        .stats {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-        .stat {
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .stat-label {
-            color: #666;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🚀 Project Portfolio</h1>
-        <p class="subtitle">A collection of web development projects</p>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">${successCount}</div>
-                <div class="stat-label">Projects</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">${dateFolders.length}</div>
-                <div class="stat-label">Dates</div>
-            </div>
-        </div>
-        <div id="projects"></div>
-    </div>
-    <script>
-        const projects = ${JSON.stringify(
-            await Promise.all(
-                dateFolders.map(async (dateFolder) => {
-                    const datePath = join(__dirname, dateFolder)
-                    const projectFolders = await readdir(datePath, { withFileTypes: true })
-                    const projects = []
-                    for (const pf of projectFolders) {
-                        if (pf.isDirectory()) {
-                            const pkgPath = join(datePath, pf.name, "package.json")
-                            if (await exists(pkgPath)) {
-                                projects.push(pf.name)
-                            }
-                        }
-                    }
-                    return { date: dateFolder, projects }
-                })
-            )
-        )};
+    const indexHtml = `
+        <!doctype html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>My Projects</title>
+                <script src="https://cdn.tailwindcss.com"></script>
+                <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.23/lodash.min.js"></script>
+                <style>
+                    @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+                    @import "tailwindcss";
 
-        const projectsDiv = document.getElementById('projects');
-        projects.forEach(({ date, projects }) => {
-            if (projects.length === 0) return;
-            
-            const section = document.createElement('div');
-            section.className = 'date-section';
-            
-            const header = document.createElement('h2');
-            header.className = 'date-header';
-            header.textContent = date;
-            section.appendChild(header);
-            
-            const grid = document.createElement('div');
-            grid.className = 'projects';
-            
-            projects.forEach(project => {
-                const link = document.createElement('a');
-                link.className = 'project-link';
-                link.href = \`/\${date}/\${project}\`;
-                link.textContent = project.split('-').map(w => 
-                    w.charAt(0).toUpperCase() + w.slice(1)
-                ).join(' ');
-                grid.appendChild(link);
-            });
-            
-            section.appendChild(grid);
-            projectsDiv.appendChild(section);
-        });
-    </script>
-</body>
-</html>`
+                    * {
+                        font-family: Comfortaa;
+                    }
+
+                    .dot-pattern {
+                        background-image: radial-gradient(circle, #222222 1px, transparent 1px);
+                        background-size: 20px 20px;
+                    }
+                </style>
+            </head>
+            <body class="bg-[#0A0A0A] text-white dot-pattern min-h-screen">
+                <!-- Container -->
+                <div class="max-w-4xl mx-auto px-1 py-8 flex flex-col items-start gap-10">
+                    <header class="bg-neutral-900/50 p-12 rounded-2xl">
+                        <h1 class="text-5xl font-bold mb-2">Projects</h1>
+                        <p class="text-neutral-500 text-sm"><span class="font-semibold" id="total">21</span> projects</p>
+                    </header>
+                    <main class="bg-neutral-900/50 p-8 rounded-2xl self-stretch">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-neutral-600 text-xs uppercase tracking-wider border-b border-neutral-800">
+                                    <th class="w-2/6 text-left pb-3 font-semibold">Date</th>
+                                    <th class="w-4/6 text-left pb-3 font-semibold">Project</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm" id="table-body">
+                                <tr class="border-b border-neutral-900 hover:bg-neutral-900/30 transition-colors">
+                                    <td class="py-4">
+                                        <time class="text-neutral-500 font-mono text-xs" datetime="2026-02-26">2026-02-26</time>
+                                    </td>
+                                    <td class="py-4">
+                                        <a href="#" class="text-neutral-200 font-medium">Cool</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </main>
+                </div>
+            </body>
+            <script>
+                const table = document.getElementById("table-body")
+                const total = document.getElementById("total")
+                /**
+                 * @type {Map<string, { date: string, path: string }>}
+                 */
+                const AllProjects = new Map()
+
+                function component([name, { date, path }]) {
+                    return \`
+                        <tr class="border-b border-neutral-900 hover:bg-neutral-900/30 transition-colors">
+                            <td class="py-4">
+                                <time class="text-neutral-500 font-mono text-xs" datetime="\${date}">\${date}</time>
+                            </td>
+                            <td class="py-4">
+                                <a href="\${path}" class="text-neutral-200 font-medium">$\{name}</a>
+                            </td>
+                        </tr>
+                    \`
+                }
+
+                const array = ${JSON.stringify(
+                    await Promise.all(
+                        dateFolders.map(async (dateFolder) => {
+                            const datePath = join(__dirname, dateFolder)
+                            const projectFolders = await readdir(datePath, { withFileTypes: true })
+                            const projects = []
+                            for (const pf of projectFolders) {
+                                if (pf.isDirectory()) {
+                                    const pkgPath = join(datePath, pf.name, "package.json")
+                                    if (await exists(pkgPath)) {
+                                        projects.push(pf.name)
+                                    }
+                                }
+                            }
+                            return { date: dateFolder, projects }
+                        })
+                    )
+                )}
+
+                for (const { date, projects } of array) {
+                    for (const project of projects) AllProjects.set(_.startCase(project), { date, path: \`\${date}/\${project}\` })
+                }
+
+                total.textContent = AllProjects.size
+                table.innerHTML = Array.from(AllProjects.entries())
+                    .map((x) => component(x))
+                    .join("\\n")
+            </script>
+        </html>
+    `
 
     await mkdir(DIST_DIR, { recursive: true })
     await import("fs/promises").then((fs) => fs.writeFile(join(DIST_DIR, "index.html"), indexHtml))

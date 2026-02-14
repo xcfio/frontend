@@ -40,6 +40,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "erasableSyntaxOnly": true
   },
   "include": ["**/*"]
 }
