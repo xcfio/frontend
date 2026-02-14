@@ -1,5 +1,5 @@
 {
-    "name": "Scrim-s02tj9e",
+    "name": "scrim-s02tj9e",
     "description": "https://scrimba.com/frontend-path-c0j/~0gr",
     "scripts": {
         "start": "vite",
@@ -10,5 +10,7 @@
     "dependencies": {
         "vite": "latest"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "@types/node": "^24.10.1"
+    }
 }
