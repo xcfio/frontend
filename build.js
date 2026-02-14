@@ -10,6 +10,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST_DIR = join(__dirname, "dist")
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/
 
+// Detect package manager - use npm in CI environments like Vercel
+const isCI = process.env.CI || process.env.VERCEL
+const PKG_MANAGER = isCI ? "npm" : "pnpm"
+const INSTALL_TIMEOUT = 120000 // 2 minutes timeout
+
 async function exists(path) {
     try {
         await stat(path)
@@ -35,12 +40,19 @@ async function buildProject(dateFolder, projectName) {
         // Install dependencies if node_modules doesn't exist
         const nodeModulesPath = join(projectPath, "node_modules")
         if (!(await exists(nodeModulesPath))) {
-            console.log(`   📦 Installing dependencies...`)
-            await execPromise("pnpm install", { cwd: projectPath })
+            console.log(`   📦 Installing dependencies with ${PKG_MANAGER}...`)
+            await execPromise(`${PKG_MANAGER} install`, {
+                cwd: projectPath,
+                timeout: INSTALL_TIMEOUT
+            })
         }
 
         // Build the project
-        await execPromise("node --run build", { cwd: projectPath })
+        console.log(`   🏗️  Building...`)
+        await execPromise("node --run build", {
+            cwd: projectPath,
+            timeout: INSTALL_TIMEOUT
+        })
 
         // Copy built files to dist
         const projectDistPath = join(projectPath, "dist")
