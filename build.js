@@ -68,7 +68,8 @@ async function buildProject(dateFolder, projectName) {
             return false
         }
     } catch (error) {
-        console.error(`❌ Error building ${dateFolder}/${projectName}:`, error.message)
+        console.error(`❌ Error building ${dateFolder}/${projectName}:`)
+        console.log(error)
         return false
     }
 }
