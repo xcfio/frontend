@@ -1,6 +1,19 @@
 {
+    "name": "frontend-portfolio",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "build": "node build.js",
+        "preview": "node preview.js",
+        "deploy": "vercel --prod",
+        "deploy:preview": "vercel",
+        "clean": "node -e \"require('fs').rmSync('dist', {recursive: true, force: true})\" && echo Cleaned dist folder"
+    },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.18",
         "tailwindcss": "^4.1.18"
+    },
+    "devDependencies": {
+        "vite": "^5.0.0"
     }
 }
