@@ -1,6 +1,4 @@
 import { defineConfig } from "vite"
 
-export default defineConfig({
-    base: "./",
-    plugins: []
-})
+const path = `${import.meta.dirname}`.replaceAll("\\", "/").split("/").reverse()
+export default defineConfig({ base: `${path[1]}/${path[0]}`, plugins: [] })
