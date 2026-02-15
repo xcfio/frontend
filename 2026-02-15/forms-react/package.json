@@ -1,6 +1,6 @@
 {
-    "name": "scrim-s06j1gs",
-    "description": "https://www.figma.com/design/QG4cOExkdbIbhSfWJhs2gs/Travel-Journal",
+    "name": "Scrim-s06iq6p",
+    "description": "https://scrimba.com/frontend-path-c0j/~0xin",
     "scripts": {
         "start": "vite",
         "dev": "vite",
@@ -8,8 +8,8 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "react": "19.0.0-rc-8b08e99e-20240713",
-        "react-dom": "19.0.0-rc-8b08e99e-20240713",
+        "react": "19.0.0-rc-e56f4ae3-20240830",
+        "react-dom": "19.0.0-rc-e56f4ae3-20240830",
         "vite": "latest"
     },
     "devDependencies": {

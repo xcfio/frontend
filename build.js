@@ -139,12 +139,12 @@ async function buildAll() {
             </head>
             <body class="bg-[#0A0A0A] text-white dot-pattern min-h-screen">
                 <!-- Container -->
-                <div class="max-w-4xl mx-auto px-1 py-8 flex flex-col items-start gap-10">
+                <div class="max-w-5xl mx-6 lg:mx-auto px-1 py-8 flex flex-col gap-10">
                     <header class="bg-neutral-900/50 p-12 rounded-2xl">
                         <h1 class="text-5xl font-bold mb-2">Projects</h1>
                         <p class="text-neutral-500 text-sm"><span class="font-semibold" id="total">21</span> projects</p>
                     </header>
-                    <main class="bg-neutral-900/50 p-8 rounded-2xl self-stretch">
+                    <main class="bg-neutral-900/50 p-8 rounded-2xl">
                         <table class="w-full">
                             <thead>
                                 <tr class="text-neutral-600 text-xs uppercase tracking-wider border-b border-neutral-800">
