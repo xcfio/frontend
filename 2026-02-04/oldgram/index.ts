@@ -7,7 +7,7 @@ function renderString(user: (typeof posts)[number]) {
             <header class="flex justify-start items-center gap-4 p-4">
                 <img 
                     class="w-[10%] h-[10%] rounded-full" 
-                    src="${user.avatar}" 
+                    src="./${user.avatar}" 
                     alt="A photo of ${user.name}" 
                 />
                 <div>
@@ -17,8 +17,8 @@ function renderString(user: (typeof posts)[number]) {
             </header>
             <figure aria-label="User post image">
                 <img
-                    class="w-[100%]"
-                    src="${user.post}"
+                    class="w-full"
+                    src="./${user.post}"
                     alt="A post by ${user.username}"
                 />
             </figure>
@@ -26,17 +26,17 @@ function renderString(user: (typeof posts)[number]) {
                 <div class="flex justify-start items-center gap-4 mb-2" aria-label="Post actions">
                     <img
                         class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
-                        src="images/icon-heart.png"
+                        src="./images/icon-heart.png"
                         alt="Heart icon for liking the post"
                     />
                     <img
                         class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
-                        src="images/icon-comment.png"
+                        src="./images/icon-comment.png"
                         alt="Comment icon for commenting on the post"
                     />
                     <img
                         class="w-[8%] h-[8%] hover:opacity-50 transition-opacity duration-100"
-                        src="images/icon-dm.png"
+                        src="./images/icon-dm.png"
                         alt="Direct message icon for sending a direct message"
                     />
                 </div>

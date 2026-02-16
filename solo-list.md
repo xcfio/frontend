@@ -8,4 +8,5 @@
 9.2 - Color Scheme Generator - https://www.figma.com/design/twasy8Bca4hW7gunLFSLoY/Color-Scheme-Generator
 9.3 - Movie Watchlist - https://www.figma.com/design/jhFRdFIdHpRxsDznNXtpXw/Movie-Watchlist
 11.1 - Digital Business Card - https://www.figma.com/design/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card
+11.6 - Quizzical - https://www.figma.com/design/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App
 12.1 - Component Library - https://www.figma.com/design/8z3MzQUTw2STq71aHbjYaF/Component-Library
