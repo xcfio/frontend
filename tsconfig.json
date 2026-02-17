@@ -42,5 +42,5 @@
     "skipLibCheck": true,
     "erasableSyntaxOnly": true
   },
-  "include": ["**/*"]
+  "include": ["**/*", ".temp/App.tsx"]
 }
