@@ -1,5 +1,6 @@
 {
-    "name": "react",
+    "name": "quizzical",
+    "description": "https://www.figma.com/design/E9S5iPcm10f0RIHK8mCqKL/Quizzical-App",
     "private": true,
     "version": "0.0.0",
     "type": "module",
